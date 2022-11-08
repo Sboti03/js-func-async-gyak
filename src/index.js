@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 })
 
 async function readUsers() {
-    users = await (await fetch('../users.json')).json()
+    users = await (await fetch('./users.json')).json()
     users = users.users
 }
 
@@ -122,5 +122,5 @@ function showBrownEye() {
     let content = document.getElementById('content')
     content.innerHTML = ''
 
-    content.textContent = users.filter(e=> e.eyeColor === 'Brown').length
+    content.textContent = users.filter(e=> e.eyeColor === 'Brown').length + 'db barna szemű van'
 }
