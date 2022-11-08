@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 })
 
 async function readUsers() {
-    users = await (await fetch('./users.json')).json()
+    users = await (await fetch('../users.json')).json()
     users = users.users
 }
 
